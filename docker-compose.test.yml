@@ -1,0 +1,5 @@
+version: '3.3'
+services:
+  sut:
+    image: ppamo/newman_runner:${DOCKER_TAG}
+    command: sh -c /tests/run_tests.sh
