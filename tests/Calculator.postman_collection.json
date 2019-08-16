@@ -1,0 +1,511 @@
+{
+	"info": {
+		"_postman_id": "2411a6c1-6c42-4e4b-b9ed-9211d0c580b0",
+		"name": "Calculator",
+		"description": "Tests for calculator project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Add",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9e274c28-9fdb-4421-b71f-ba22f404472b",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"response should be okay to process\", function () { \r",
+							"    pm.response.to.not.be.error; \r",
+							"    pm.response.to.have.jsonBody(\"result\"); \r",
+							"    pm.response.to.not.have.jsonBody(\"error\"); \r",
+							"});\r",
+							"\r",
+							"pm.test(\"response should have correct operation result\", function () {\r",
+							"   pm.expect(pm.response.json().result).to.eql(10);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.us-south.apiconnect.appdomain.cloud/pablomansillaibmcom-dev/tutorial/calculator/json/?operation=add&n1=7&n2=3",
+					"protocol": "https",
+					"host": [
+						"api",
+						"us-south",
+						"apiconnect",
+						"appdomain",
+						"cloud"
+					],
+					"path": [
+						"pablomansillaibmcom-dev",
+						"tutorial",
+						"calculator",
+						"json",
+						""
+					],
+					"query": [
+						{
+							"key": "operation",
+							"value": "add"
+						},
+						{
+							"key": "n1",
+							"value": "7"
+						},
+						{
+							"key": "n2",
+							"value": "3"
+						}
+					]
+				},
+				"description": "Get request to add operation"
+			},
+			"response": []
+		},
+		{
+			"name": "GET subtract",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "371232d0-9319-490f-b356-b94895c96c91",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"response should be okay to process\", function () { \r",
+							"    pm.response.to.not.be.error; \r",
+							"    pm.response.to.have.jsonBody(\"result\"); \r",
+							"    pm.response.to.not.have.jsonBody(\"error\"); \r",
+							"});\r",
+							"\r",
+							"pm.test(\"response should have correct operation result\", function () {\r",
+							"   pm.expect(pm.response.json().result).to.eql(4);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.us-south.apiconnect.appdomain.cloud/pablomansillaibmcom-dev/tutorial/calculator/json?operation=subtract&n1=7&n2=3",
+					"protocol": "https",
+					"host": [
+						"api",
+						"us-south",
+						"apiconnect",
+						"appdomain",
+						"cloud"
+					],
+					"path": [
+						"pablomansillaibmcom-dev",
+						"tutorial",
+						"calculator",
+						"json"
+					],
+					"query": [
+						{
+							"key": "operation",
+							"value": "subtract"
+						},
+						{
+							"key": "n1",
+							"value": "7"
+						},
+						{
+							"key": "n2",
+							"value": "3"
+						}
+					]
+				},
+				"description": "Request to an subtract operation"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Multiply",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1d714965-b59a-42ae-9ed0-0c145c775fef",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"response should be okay to process\", function () { \r",
+							"    pm.response.to.not.be.error; \r",
+							"    pm.response.to.have.jsonBody(\"result\"); \r",
+							"    pm.response.to.not.have.jsonBody(\"error\"); \r",
+							"});\r",
+							"\r",
+							"pm.test(\"response should have correct operation result\", function () {\r",
+							"   pm.expect(pm.response.json().result).to.eql(21);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.us-south.apiconnect.appdomain.cloud/pablomansillaibmcom-dev/tutorial/calculator/json?operation=multiply&n1=7&n2=3",
+					"protocol": "https",
+					"host": [
+						"api",
+						"us-south",
+						"apiconnect",
+						"appdomain",
+						"cloud"
+					],
+					"path": [
+						"pablomansillaibmcom-dev",
+						"tutorial",
+						"calculator",
+						"json"
+					],
+					"query": [
+						{
+							"key": "operation",
+							"value": "multiply"
+						},
+						{
+							"key": "n1",
+							"value": "7"
+						},
+						{
+							"key": "n2",
+							"value": "3"
+						}
+					]
+				},
+				"description": "GET Multiply operation"
+			},
+			"response": []
+		},
+		{
+			"name": "GET divide",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "491fcbd9-a3aa-4fc2-a269-b9a44f04b9bc",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"response should be okay to process\", function () { \r",
+							"    pm.response.to.not.be.error; \r",
+							"    pm.response.to.have.jsonBody(\"result\"); \r",
+							"    pm.response.to.not.have.jsonBody(\"error\"); \r",
+							"});\r",
+							"\r",
+							"pm.test(\"response should have correct operation result\", function () {\r",
+							"   pm.expect(pm.response.json().result).to.eql(2.3333333333333335);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.us-south.apiconnect.appdomain.cloud/pablomansillaibmcom-dev/tutorial/calculator/json?operation=divide&n1=7&n2=3",
+					"protocol": "https",
+					"host": [
+						"api",
+						"us-south",
+						"apiconnect",
+						"appdomain",
+						"cloud"
+					],
+					"path": [
+						"pablomansillaibmcom-dev",
+						"tutorial",
+						"calculator",
+						"json"
+					],
+					"query": [
+						{
+							"key": "operation",
+							"value": "divide"
+						},
+						{
+							"key": "n1",
+							"value": "7"
+						},
+						{
+							"key": "n2",
+							"value": "3"
+						}
+					]
+				},
+				"description": "GET Divide request"
+			},
+			"response": []
+		},
+		{
+			"name": "POST Add",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "de97ec00-e53d-4460-8fb4-162e619b7043",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"response should be okay to process\", function () { \r",
+							"    pm.response.to.not.be.error; \r",
+							"    pm.response.to.have.jsonBody(\"result\"); \r",
+							"    pm.response.to.not.have.jsonBody(\"error\"); \r",
+							"});\r",
+							"\r",
+							"pm.test(\"response should have correct operation result\", function () {\r",
+							"   pm.expect(pm.response.json().result).to.eql(10);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"operation\": \"add\",\n\t\"n1\": 7,\n\t\"n2\": 3\n}"
+				},
+				"url": {
+					"raw": "https://api.us-south.apiconnect.appdomain.cloud/pablomansillaibmcom-dev/tutorial/calculator/json",
+					"protocol": "https",
+					"host": [
+						"api",
+						"us-south",
+						"apiconnect",
+						"appdomain",
+						"cloud"
+					],
+					"path": [
+						"pablomansillaibmcom-dev",
+						"tutorial",
+						"calculator",
+						"json"
+					]
+				},
+				"description": "POST request to Add operation"
+			},
+			"response": []
+		},
+		{
+			"name": "POST Subtract",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "84e6e1b3-9e0e-416a-bc73-6658159da7a7",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"response should be okay to process\", function () { \r",
+							"    pm.response.to.not.be.error; \r",
+							"    pm.response.to.have.jsonBody(\"result\"); \r",
+							"    pm.response.to.not.have.jsonBody(\"error\"); \r",
+							"});\r",
+							"\r",
+							"pm.test(\"response should have correct operation result\", function () {\r",
+							"   pm.expect(pm.response.json().result).to.eql(4);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"operation\": \"subtract\",\n\t\"n1\": 7,\n\t\"n2\": 3\n}"
+				},
+				"url": {
+					"raw": "https://api.us-south.apiconnect.appdomain.cloud/pablomansillaibmcom-dev/tutorial/calculator/json",
+					"protocol": "https",
+					"host": [
+						"api",
+						"us-south",
+						"apiconnect",
+						"appdomain",
+						"cloud"
+					],
+					"path": [
+						"pablomansillaibmcom-dev",
+						"tutorial",
+						"calculator",
+						"json"
+					]
+				},
+				"description": "POST to Subtract operation"
+			},
+			"response": []
+		},
+		{
+			"name": "POST Multiply",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e9ac343d-8468-4fe2-9cb2-1e808a0ec811",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"response should be okay to process\", function () { \r",
+							"    pm.response.to.not.be.error; \r",
+							"    pm.response.to.have.jsonBody(\"result\"); \r",
+							"    pm.response.to.not.have.jsonBody(\"error\"); \r",
+							"});\r",
+							"\r",
+							"pm.test(\"response should have correct operation result\", function () {\r",
+							"   pm.expect(pm.response.json().result).to.eql(21);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"operation\": \"multiply\",\n\t\"n1\": 7,\n\t\"n2\": 3\n}"
+				},
+				"url": {
+					"raw": "https://api.us-south.apiconnect.appdomain.cloud/pablomansillaibmcom-dev/tutorial/calculator/json",
+					"protocol": "https",
+					"host": [
+						"api",
+						"us-south",
+						"apiconnect",
+						"appdomain",
+						"cloud"
+					],
+					"path": [
+						"pablomansillaibmcom-dev",
+						"tutorial",
+						"calculator",
+						"json"
+					]
+				},
+				"description": "POST to Multiply Operation"
+			},
+			"response": []
+		},
+		{
+			"name": "POST Divide",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "89c62f43-cb86-43a6-ae6f-27f359c6fea1",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"response should be okay to process\", function () { \r",
+							"    pm.response.to.not.be.error; \r",
+							"    pm.response.to.have.jsonBody(\"result\"); \r",
+							"    pm.response.to.not.have.jsonBody(\"error\"); \r",
+							"});\r",
+							"\r",
+							"pm.test(\"response should have correct operation result\", function () {\r",
+							"   pm.expect(pm.response.json().result).to.eql(2.3333333333333335);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"operation\": \"divide\",\n\t\"n1\": 7,\n\t\"n2\": 3\n}"
+				},
+				"url": {
+					"raw": "https://api.us-south.apiconnect.appdomain.cloud/pablomansillaibmcom-dev/tutorial/calculator/json",
+					"protocol": "https",
+					"host": [
+						"api",
+						"us-south",
+						"apiconnect",
+						"appdomain",
+						"cloud"
+					],
+					"path": [
+						"pablomansillaibmcom-dev",
+						"tutorial",
+						"calculator",
+						"json"
+					]
+				},
+				"description": "POST to Divide Operation"
+			},
+			"response": []
+		}
+	]
+}
